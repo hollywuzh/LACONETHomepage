@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文献解读库 | LACONET</title>
+    <meta name="description" content="LACONET 文献解读库，按方向、年份、汇报人和状态筛选论文。">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body data-page="papers">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="LACONET 首页">
+        <span class="brand-mark">LA</span>
+        <span>
+          <strong>LACONET</strong>
+          <small>低空计算网络</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html" data-nav="home">本周组会</a>
+        <a href="papers.html" data-nav="papers">文献解读</a>
+        <a href="archive.html" data-nav="archive">历史归档</a>
+        <a href="equipment.html" data-nav="equipment">设备登记</a>
+        <a href="templates.html" data-nav="templates">汇报模板</a>
+        <a href="directions.html" data-nav="directions">研究方向</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-heading">
+        <p class="eyebrow">Literature Library</p>
+        <h1>文献解读库</h1>
+        <p>按研究方向、年份、汇报人和解读状态检索组会文献。</p>
+      </section>
+
+      <section class="library-layout">
+        <aside class="filter-panel" aria-label="文献筛选">
+          <label>
+            <span>关键词</span>
+            <input id="paperSearch" type="search" placeholder="标题、标签、汇报人">
+          </label>
+          <label>
+            <span>研究方向</span>
+            <select id="directionFilter"></select>
+          </label>
+          <label>
+            <span>年份</span>
+            <select id="yearFilter"></select>
+          </label>
+          <label>
+            <span>汇报人</span>
+            <select id="presenterFilter"></select>
+          </label>
+          <label>
+            <span>状态</span>
+            <select id="statusFilter"></select>
+          </label>
+          <button class="button ghost full" id="resetFilters" type="button">重置筛选</button>
+        </aside>
+
+        <section class="library-results">
+          <div class="result-toolbar">
+            <strong id="paperResultCount">-- 篇文献</strong>
+            <span id="paperResultMeta">全部方向</span>
+          </div>
+          <div class="paper-grid" id="paperGrid"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>LACONET 低空计算网络</span>
+      <span>© <span id="currentYear"></span></span>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

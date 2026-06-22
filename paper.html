@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文献解读详情 | LACONET</title>
+    <meta name="description" content="LACONET 文献解读详情页。">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body data-page="paper-detail">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="LACONET 首页">
+        <span class="brand-mark">LA</span>
+        <span>
+          <strong>LACONET</strong>
+          <small>低空计算网络</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html" data-nav="home">本周组会</a>
+        <a href="papers.html" data-nav="papers">文献解读</a>
+        <a href="archive.html" data-nav="archive">历史归档</a>
+        <a href="equipment.html" data-nav="equipment">设备登记</a>
+        <a href="templates.html" data-nav="templates">汇报模板</a>
+        <a href="directions.html" data-nav="directions">研究方向</a>
+      </nav>
+    </header>
+
+    <main class="page-shell detail-shell">
+      <section class="paper-hero" id="paperHero">
+        <div class="skeleton-block"></div>
+      </section>
+
+      <div class="detail-layout">
+        <article class="article-body" id="paperArticle">
+          <div class="skeleton-block tall"></div>
+        </article>
+        <aside class="toc-panel" aria-label="文献目录">
+          <strong>目录</strong>
+          <nav id="paperToc"></nav>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>LACONET 低空计算网络</span>
+      <span>© <span id="currentYear"></span></span>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+id,name,category,location,manager,status,booking_required,form_link,notes
+a100-node-01,A100 80G 计算节点,计算服务器,实验室 A301,张三,可预约,是,内部链接,单次预约建议不超过 24 小时
+edge-kit-01,低空边缘计算套件,边缘设备,实验室 A303,王五,使用中,是,内部链接,含 Jetson 与边缘网关
+uav-devkit-01,无人机开发套件,无人机平台,设备柜 B2,赵六,可预约,是,内部链接,外场测试需提前报备
+spectrum-analyzer-01,频谱分析仪,测试仪器,实验室 A302,钱七,维护中,是,内部链接,维护期间暂停借用
+network-simulator-01,网络仿真工作站,仿真平台,实验室 A301,孙八,可登记,否,内部链接,本机登记即可使用

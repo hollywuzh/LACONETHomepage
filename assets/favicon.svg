@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LACONET">
+  <rect width="64" height="64" rx="12" fill="#0f5c64"/>
+  <path d="M14 46V18h7v22h13v6H14Z" fill="#fff"/>
+  <path d="M34 46l10-28h7l10 28h-7l-2-6H43l-2 6h-7Zm11-12h6l-3-9-3 9Z" fill="#d98c18"/>
+</svg>

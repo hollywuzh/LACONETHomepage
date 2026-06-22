@@ -1,0 +1,2 @@
+id,title,authors,venue,year,presenter,meeting_date,direction,tags,status,pdf,ppt,notes,code,summary,discussion
+all-sky-uav-swarm-2024-001,All-sky autonomous computing in UAV swarm,H. Sun 等,IEEE Trans. on Mobile Comput.,2024,任宇,2026-06-18,低空计算网络,无人机集群;自主计算;低空网络;边缘计算,已归档,内部链接,内部链接,notes/all-sky-autonomous-computing-uav-swarm-2024.md,,面向无人机集群的全天候自主计算框架研究，发表于 IEEE TMC 23卷12期13258-13274页。,该框架中的自主计算能力如何与低空边缘节点协同?;全天候场景下通信中断如何影响计算任务连续性?

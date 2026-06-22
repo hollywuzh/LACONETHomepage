@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>设备登记 | LACONET</title>
+    <meta name="description" content="LACONET 实验室设备状态、预约登记与使用记录。">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body data-page="equipment">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="LACONET 首页">
+        <span class="brand-mark">LA</span>
+        <span>
+          <strong>LACONET</strong>
+          <small>低空计算网络</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html" data-nav="home">本周组会</a>
+        <a href="papers.html" data-nav="papers">文献解读</a>
+        <a href="archive.html" data-nav="archive">历史归档</a>
+        <a href="equipment.html" data-nav="equipment">设备登记</a>
+        <a href="templates.html" data-nav="templates">汇报模板</a>
+        <a href="directions.html" data-nav="directions">研究方向</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-heading">
+        <p class="eyebrow">Equipment Registry</p>
+        <h1>实验室设备使用登记</h1>
+        <p>查看设备状态、提交预约登记，并回看近期使用记录。</p>
+      </section>
+
+      <section class="metric-strip equipment-metrics" aria-label="设备概览">
+        <article>
+          <span id="metricEquipmentTotal">--</span>
+          <strong>设备总数</strong>
+        </article>
+        <article>
+          <span id="metricEquipmentAvailable">--</span>
+          <strong>可预约 / 可登记</strong>
+        </article>
+        <article>
+          <span id="metricEquipmentUsing">--</span>
+          <strong>使用中</strong>
+        </article>
+        <article>
+          <span id="metricUsagePending">--</span>
+          <strong>待确认登记</strong>
+        </article>
+      </section>
+
+      <section class="equipment-layout">
+        <section class="equipment-main">
+          <div class="result-toolbar">
+            <strong>设备状态</strong>
+            <span>预约前请确认状态与负责人</span>
+          </div>
+          <div class="equipment-grid" id="equipmentGrid">
+            <div class="skeleton-block"></div>
+          </div>
+        </section>
+
+        <aside class="equipment-side">
+          <article class="card" id="registrationCard">
+            <div class="card-head">
+              <p class="eyebrow">Register</p>
+              <h2>使用登记入口</h2>
+            </div>
+            <div class="skeleton-block small"></div>
+          </article>
+
+          <article class="card">
+            <div class="card-head">
+              <p class="eyebrow">Rules</p>
+              <h2>使用规范</h2>
+            </div>
+            <ul class="check-list">
+              <li>使用前完成登记，说明用途和预计归还时间。</li>
+              <li>计算服务器长任务建议提前一天预约。</li>
+              <li>外场无人机测试需同步告知负责人。</li>
+              <li>设备异常请在记录中备注并通知管理员。</li>
+            </ul>
+          </article>
+        </aside>
+      </section>
+
+      <section class="section-block">
+        <div class="section-title">
+          <p class="eyebrow">Usage</p>
+          <h2>近期使用记录</h2>
+        </div>
+        <div class="usage-list" id="usageList">
+          <div class="skeleton-block"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>LACONET 低空计算网络</span>
+      <span>© <span id="currentYear"></span></span>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

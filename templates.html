@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>汇报模板 | LACONET</title>
+    <meta name="description" content="LACONET 文献解读、组会记录与 PPT 检查模板。">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body data-page="templates">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="LACONET 首页">
+        <span class="brand-mark">LA</span>
+        <span>
+          <strong>LACONET</strong>
+          <small>低空计算网络</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html" data-nav="home">本周组会</a>
+        <a href="papers.html" data-nav="papers">文献解读</a>
+        <a href="archive.html" data-nav="archive">历史归档</a>
+        <a href="equipment.html" data-nav="equipment">设备登记</a>
+        <a href="templates.html" data-nav="templates">汇报模板</a>
+        <a href="directions.html" data-nav="directions">研究方向</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-heading">
+        <p class="eyebrow">Templates</p>
+        <h1>汇报模板</h1>
+        <p>文献解读、组会记录和 PPT 检查清单。</p>
+      </section>
+
+      <section class="template-grid">
+        <article class="card template-card">
+          <div class="card-head">
+            <p class="eyebrow">Markdown</p>
+            <h2>文献解读模板</h2>
+          </div>
+          <p>统一每篇论文的整理结构，便于归档和后续检索。</p>
+          <div class="template-actions">
+            <button class="button primary" type="button" data-template-select="literature">预览</button>
+            <button class="button ghost" type="button" data-template-download="literature">下载 Markdown</button>
+            <button class="button ghost" type="button" data-template-copy="literature">复制内容</button>
+          </div>
+        </article>
+        <article class="card template-card">
+          <div class="card-head">
+            <p class="eyebrow">Record</p>
+            <h2>组会记录模板</h2>
+          </div>
+          <p>记录主题、讨论结论、待办事项和下周预告。</p>
+          <div class="template-actions">
+            <button class="button primary" type="button" data-template-select="meeting">预览</button>
+            <button class="button ghost" type="button" data-template-download="meeting">下载 Markdown</button>
+            <button class="button ghost" type="button" data-template-copy="meeting">复制内容</button>
+          </div>
+        </article>
+        <article class="card template-card">
+          <div class="card-head">
+            <p class="eyebrow">Slides</p>
+            <h2>PPT 检查清单</h2>
+          </div>
+          <p>汇报前检查背景、问题、方法、实验和讨论问题是否完整。</p>
+          <div class="template-actions">
+            <button class="button primary" type="button" data-template-select="slides">预览</button>
+            <button class="button ghost" type="button" data-template-download="slides">下载 Markdown</button>
+            <button class="button ghost" type="button" data-template-copy="slides">复制内容</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="section-block">
+        <div class="section-title">
+          <p class="eyebrow">Preview</p>
+          <h2 id="templatePreviewTitle">文献解读模板预览</h2>
+        </div>
+        <article class="article-body compact" id="templatePreview">
+          <div class="skeleton-block tall"></div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>LACONET 低空计算网络</span>
+      <span>© <span id="currentYear"></span></span>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

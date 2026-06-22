@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LACONET 低空计算网络组会平台</title>
+    <meta name="description" content="LACONET 低空计算网络组会、文献解读与讨论归档工作台。">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="LACONET 首页">
+        <span class="brand-mark">LA</span>
+        <span>
+          <strong>LACONET</strong>
+          <small>低空计算网络</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html" data-nav="home">本周组会</a>
+        <a href="papers.html" data-nav="papers">文献解读</a>
+        <a href="archive.html" data-nav="archive">历史归档</a>
+        <a href="equipment.html" data-nav="equipment">设备登记</a>
+        <a href="templates.html" data-nav="templates">汇报模板</a>
+        <a href="directions.html" data-nav="directions">研究方向</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="workbench-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">LACONET Seminar Hub</p>
+          <h1>低空计算网络组会平台</h1>
+          <p class="hero-lede">面向组内学生的文献解读、组会安排与讨论归档工作台。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="papers.html">进入文献库</a>
+            <a class="button ghost" href="templates.html">查看模板</a>
+          </div>
+        </div>
+        <div class="network-panel" aria-label="低空网络拓扑视图">
+          <canvas id="networkCanvas" width="720" height="360"></canvas>
+          <div class="network-legend">
+            <span><i class="legend-dot air"></i> UAV</span>
+            <span><i class="legend-dot edge"></i> Edge</span>
+            <span><i class="legend-dot ground"></i> Ground</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="metric-strip" aria-label="组会概览">
+        <article>
+          <span id="metricMeetingDate">--</span>
+          <strong>本周组会</strong>
+        </article>
+        <article>
+          <span id="metricPaperCount">--</span>
+          <strong>文献条目</strong>
+        </article>
+        <article>
+          <span id="metricArchiveCount">--</span>
+          <strong>已归档记录</strong>
+        </article>
+        <article>
+          <span id="metricTodoCount">--</span>
+          <strong>待办事项</strong>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="card span-2" id="currentMeetingCard">
+          <div class="card-head">
+            <p class="eyebrow">This Week</p>
+            <h2>本周组会</h2>
+          </div>
+          <div class="skeleton-block"></div>
+        </article>
+
+        <article class="card" id="todoCard">
+          <div class="card-head">
+            <p class="eyebrow">Tasks</p>
+            <h2>待办提醒</h2>
+          </div>
+          <div class="skeleton-block small"></div>
+        </article>
+
+        <article class="card span-2" id="currentPapersCard">
+          <div class="card-head">
+            <p class="eyebrow">Reading</p>
+            <h2>本周文献解读</h2>
+          </div>
+          <div class="skeleton-block"></div>
+        </article>
+
+        <article class="card" id="nextMeetingCard">
+          <div class="card-head">
+            <p class="eyebrow">Next</p>
+            <h2>下周预告</h2>
+          </div>
+          <div class="skeleton-block small"></div>
+        </article>
+
+        <article class="card" id="recentMeetingsCard">
+          <div class="card-head">
+            <p class="eyebrow">Archive</p>
+            <h2>近期组会记录</h2>
+          </div>
+          <div class="skeleton-block"></div>
+        </article>
+
+        <article class="card" id="latestPapersCard">
+          <div class="card-head">
+            <p class="eyebrow">Library</p>
+            <h2>最新归档文献</h2>
+          </div>
+          <div class="skeleton-block"></div>
+        </article>
+
+        <article class="card" id="quickLinksCard">
+          <div class="card-head">
+            <p class="eyebrow">Links</p>
+            <h2>常用入口</h2>
+          </div>
+          <div class="quick-link-grid">
+            <a href="templates.html">汇报模板</a>
+            <a href="templates.html">解读模板</a>
+            <a href="equipment.html">设备登记</a>
+            <a href="templates.html">记录模板</a>
+            <a href="docs/data-schema.md">数据字段</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="section-block">
+        <div class="section-title">
+          <p class="eyebrow">Directions</p>
+          <h2>研究方向入口</h2>
+        </div>
+        <div class="direction-grid" id="homeDirections"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-title">
+          <p class="eyebrow">Questions</p>
+          <h2>讨论问题精选</h2>
+        </div>
+        <div class="question-list" id="discussionQuestions"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>LACONET 低空计算网络</span>
+      <span>© <span id="currentYear"></span></span>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
