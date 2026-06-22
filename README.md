@@ -39,6 +39,8 @@ http://localhost:8080
 
 详细字段约定见 [docs/data-schema.md](docs/data-schema.md)。
 
+更新与发布流程见 [docs/update-workflow.md](docs/update-workflow.md)。
+
 ## 目录结构
 
 ```text
