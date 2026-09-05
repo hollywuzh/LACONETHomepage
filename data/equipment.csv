@@ -2,6 +2,7 @@ id,name,quantity,category,location,manager,status,booking_required,form_link,not
 nokov-motion-capture-system,NOKOV动捕系统,1,动捕设备,待确认,,待确认,待确认,内部链接,NOKOV；含4个摄像头、1个交换机及若干网线
 raspberry-pi-4-4gb-kit,树莓派4代开发板 4G套餐 32G卡,1,开发板,待确认,,待确认,待确认,内部链接,芯板坊；单板、黑色外壳、电源、microHDMI线、网线、32G卡、读卡器及摄像头
 raspberry-pi-kit-16gb-card,树莓派开发板 16G卡,1,开发板,待确认,,待确认,待确认,内部链接,单板、红色外壳、电源、microHDMI线、网线、32G卡、读卡器及摄像头
+orangepi-5pro-kit-f-16gb,香橙派 OrangePi 5 Pro 16G 套餐 F,1,开发板,待确认,,待确认,待确认,内部链接,Orange Pi；RK3588S；单板、256G eMMC、金属外壳、10.1寸屏、电源、摄像头及散热片
 ruijie-lora-gateway-8ch,芮捷物联网网关8通道,1,物联网网关,待确认,,待确认,待确认,内部链接,芮捷电子；LoRa/LoRaWAN室内室外4G以太网SX1302多链路 GL610-CN频段
 heltec-lora32-v3,LoRa32 V3 ESP32-S3 LoRa兼容Arduino开发板 OLED SX1262,6,开发板,待确认,,待确认,待确认,内部链接,惠特自动化
 lilygo-t-beam-v1-2,T-Beam V1.2 ESP32 LoRa SX1262 433MHz CH9102F AXP2101版本 Q423-SoftRF,1,开发板,待确认,,待确认,待确认,内部链接,LILYGO
