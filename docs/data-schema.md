@@ -69,6 +69,7 @@
 | `duration` | 汇报时长 | `15-20 分钟` |
 | `status` | 汇报状态 | `待汇报` / `已归档` / `需补充` |
 | `ppt` | PPT 入口，可填 URL、相对路径、`内部链接` 或留空 | `内部链接` |
+| `docx` | Word 汇报文档入口，可留空 | `materials/2026-09-12/pan-jianghao-report.docx` |
 | `notes` | Markdown 解读路径 | `notes/RPT-20260626-S001.md` |
 | `code` | 本次汇报验证代码或补充材料入口 | `https://github.com/...` |
 | `summary` | 本次汇报的一句话说明 | `围绕无人机辅助 MEC 任务卸载进行文献解读。` |

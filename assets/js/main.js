@@ -102,15 +102,19 @@
     return `${reports.length} 次汇报`;
   }
 
+  function meetingRecordLabel(meeting) {
+    return meeting.status === "待举行" ? "组会预告" : "会议纪要";
+  }
+
   function renderMeetingRecordLink(meeting) {
     if (!meeting.record) return "";
     if (meeting.record === "内部链接") {
-      return `<span class="material disabled">会议纪要 · 内部</span>`;
+      return `<span class="material disabled">${meetingRecordLabel(meeting)} · 内部</span>`;
     }
     if (/^https?:\/\//i.test(meeting.record)) {
-      return `<a class="material" href="${Data.escapeHTML(meeting.record)}">会议纪要</a>`;
+      return `<a class="material" href="${Data.escapeHTML(meeting.record)}">${meetingRecordLabel(meeting)}</a>`;
     }
-    return `<a class="material" href="${meetingURL(meeting.id)}">会议纪要</a>`;
+    return `<a class="material" href="${meetingURL(meeting.id)}">${meetingRecordLabel(meeting)}</a>`;
   }
 
   function materialLinksForPaper(paper, reports = []) {
@@ -119,6 +123,7 @@
       Data.renderMaterialLink("PDF", paper.pdf),
       latest?.notes ? `<a class="material" href="${reportURL(reportRid(latest))}">最新解读</a>` : "",
       latest ? Data.renderMaterialLink("最新 PPT", latest.ppt) : "",
+      latest ? Data.renderMaterialLink("汇报 Word", latest.docx) : "",
       Data.renderMaterialLink("代码", paper.code)
     ].filter(Boolean).join("");
   }
@@ -127,6 +132,7 @@
     return [
       Data.renderMaterialLink("PDF", paper.pdf),
       Data.renderMaterialLink("PPT", report.ppt),
+      Data.renderMaterialLink("汇报 Word", report.docx),
       includeNotes && report.notes ? `<a class="material" href="${reportURL(reportRid(report))}">解读</a>` : "",
       Data.renderMaterialLink("代码", report.code || paper.code)
     ].filter(Boolean).join("");
@@ -454,7 +460,7 @@
       <div class="material-row">
         ${materialLinksForReport(report, paper, false)}
         ${paperPid(paper) ? `<a class="material" href="${paperURL(paperPid(paper))}">论文条目</a>` : ""}
-        ${meeting ? `<a class="material" href="${meetingURL(meeting.id)}">会议纪要</a>` : ""}
+        ${meeting ? `<a class="material" href="${meetingURL(meeting.id)}">${meetingRecordLabel(meeting)}</a>` : ""}
       </div>
     `);
 
@@ -503,7 +509,7 @@
               ${related.map(({ report, paper }) => `<a href="${reportURL(reportRid(report))}">${Data.escapeHTML(paper.title || reportPid(report))}<span>${Data.escapeHTML(report.report_type || "文献解读")} · ${Data.escapeHTML(report.presenter || "待定")} · ${Data.escapeHTML(reportRid(report))}</span></a>`).join("") || "<span class='muted'>未关联 RID</span>"}
             </div>
             <div class="material-row">
-              ${Data.renderMaterialLink("资料", meeting.materials)}
+              ${Data.renderMaterialLink(meeting.status === "待举行" ? "会议入口" : "资料", meeting.materials)}
               ${renderMeetingRecordLink(meeting)}
             </div>
           </div>
@@ -529,7 +535,7 @@
     const meetingReports = related.map((item) => item.report);
     document.title = `${meeting.topic} | LACONET`;
     setHTML("#meetingHero", `
-      <p class="eyebrow">Meeting Minutes</p>
+      <p class="eyebrow">${meeting.status === "待举行" ? "Meeting Preview" : "Meeting Minutes"}</p>
       <h1>${Data.escapeHTML(meeting.topic)}</h1>
       <p class="summary">${Data.formatFullDate(meeting.date)} ${Data.escapeHTML(meeting.time)} · ${Data.escapeHTML(meeting.location)}</p>
       <div class="paper-hero-meta">
@@ -539,7 +545,7 @@
         ${Data.renderStatus(meeting.status)}
       </div>
       <div class="material-row">
-        ${Data.renderMaterialLink("资料", meeting.materials)}
+        ${Data.renderMaterialLink(meeting.status === "待举行" ? "会议入口" : "资料", meeting.materials)}
         <a class="material" href="archive.html">返回归档</a>
       </div>
       ${related.length ? `<div class="archive-papers hero-related">${related.map(({ report, paper }) => `<a href="${reportURL(reportRid(report))}">${Data.escapeHTML(paper.title || reportPid(report))}<span>${Data.escapeHTML(report.report_type || "文献解读")} · ${Data.escapeHTML(report.presenter || "待定")} · ${Data.escapeHTML(reportRid(report))}</span></a>`).join("")}</div>` : ""}
