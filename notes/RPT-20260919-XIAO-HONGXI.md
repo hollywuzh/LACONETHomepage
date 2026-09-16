@@ -1,42 +1,42 @@
 ---
 rid: RPT-20260919-XIAO-HONGXI
-pid: DOI-10.1109_TSC.2025.3544124
-title: Joint Trajectory Optimization and Resource Allocation in UAV-MEC Systems: A Lyapunov-Assisted DRL Approach
+pid: DOI-10.1109_TC.2025.3587976
+title: Trajectory Optimization and Power Allocation for Multi-UAV Wireless Networks: A Communication-Based Multi-Agent Deep Reinforcement Learning Approach
 presenter: 肖鈜曦
 student_uid: XIAO-HONGXI
 meeting_date: 2026-09-19
 report_type: 文献解读
-direction: 边缘计算
+direction: 强化学习
 ---
 
 # 肖鈜曦文献汇报预告
 
 ## 文献信息
 
-- 论文：Joint Trajectory Optimization and Resource Allocation in UAV-MEC Systems: A Lyapunov-Assisted DRL Approach
-- 作者：Ying Chen、Yaozong Yang、Yuan Wu、Jiwei Huang、Lian Zhao
-- 来源：IEEE Transactions on Services Computing，2025
-- DOI：[ 10.1109/TSC.2025.3544124 ](https://doi.org/10.1109/TSC.2025.3544124)
+- 论文：Trajectory Optimization and Power Allocation for Multi-UAV Wireless Networks: A Communication-Based Multi-Agent Deep Reinforcement Learning Approach
+- 作者：Zimeng Yuan、Yuanguo Bi、Yanbo Fan、Yuheng Liu、Lianbo Ma、Liang Zhao、Qiang He
+- 来源：IEEE Transactions on Computers，2025
+- DOI：[ 10.1109/TC.2025.3587976 ](https://doi.org/10.1109/TC.2025.3587976)
 - 汇报人：肖鈜曦
 - 日期：2026-09-19
 - 状态：待汇报
 
 ## 计划汇报内容
 
-本次计划解读 JTORA：结合 Lyapunov 优化、DRL 和凸优化，处理随机任务到达、用户移动以及无人机能耗约束下的轨迹与资源分配。重点讨论问题分解、资源变量职责、任务量耦合和理论保证的适用条件。
+本次计划解读 CATEN：利用执行阶段的信息共享与集中式注意力评价，联合优化多无人机轨迹和功率，权衡服务覆盖与能耗。重点辨析通信机制、局部观测和集中训练之间的关系，并讨论实验与消融证据。
 
 ## 预习与讨论重点
 
-会前关注：Lyapunov 逐时隙转化、计算与卸载可行域的耦合、SAC 策略的可行性，以及能耗和队列积压之间的权衡。
+会前关注：QoS 达标人数与能耗的权重、执行阶段消息来源与同步假设、通信与注意力模块的消融，以及速度和碰撞约束的保障方式。
 
 当前为会前预告，汇报结论和会后讨论待补充。精读标注中的纸面核验和待核查项不等同于完整算法复现。
 
 ## 讨论问题
 
-- Lyapunov 分解后是否保留本地计算与卸载的任务量耦合约束？
-- 理论性能界如何对应实际 SAC 策略与求解误差？
+- 执行阶段通信机制依赖哪些信息和同步假设？
+- QoS 达标人数与能耗如何权衡，消融实验能否支撑模块贡献？
 
 ## 附件与组会入口
 
-- [查看完整句精读标注 PDF](materials/papers/chen-2025-annotated.pdf)
+- [查看完整句精读标注 PDF](materials/papers/caten-2025-annotated.pdf)
 - [查看本周安排与腾讯会议入口](meeting.html?id=meeting-2026-09-19)
