@@ -117,12 +117,16 @@
     return `<a class="material" href="${meetingURL(meeting.id)}">${meetingRecordLabel(meeting)}</a>`;
   }
 
+  function presentationLabel(value) {
+    return /\.pdf(?:[?#]|$)/i.test(value || "") ? "汇报幻灯片 PDF" : "汇报 PPT";
+  }
+
   function materialLinksForPaper(paper, reports = []) {
     const latest = reports[0];
     return [
       Data.renderMaterialLink("PDF", paper.pdf),
       latest?.notes ? `<a class="material" href="${reportURL(reportRid(latest))}">最新解读</a>` : "",
-      latest ? Data.renderMaterialLink("最新 PPT", latest.ppt) : "",
+      latest ? Data.renderMaterialLink(`最新${presentationLabel(latest.ppt)}`, latest.ppt) : "",
       latest ? Data.renderMaterialLink("汇报 Word", latest.docx) : "",
       Data.renderMaterialLink("代码", paper.code)
     ].filter(Boolean).join("");
@@ -131,7 +135,7 @@
   function materialLinksForReport(report, paper = {}, includeNotes = true) {
     return [
       Data.renderMaterialLink("PDF", paper.pdf),
-      Data.renderMaterialLink("PPT", report.ppt),
+      Data.renderMaterialLink(presentationLabel(report.ppt), report.ppt),
       Data.renderMaterialLink("汇报 Word", report.docx),
       includeNotes && report.notes ? `<a class="material" href="${reportURL(reportRid(report))}">解读</a>` : "",
       Data.renderMaterialLink("代码", report.code || paper.code)
