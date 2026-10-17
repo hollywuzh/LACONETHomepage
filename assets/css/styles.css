@@ -1340,3 +1340,18 @@ h3 {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+.intro-video-section {
+  max-width: 960px;
+  margin: 0 auto 24px;
+}
+.intro-video-panel figcaption h1 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+.intro-video-panel figcaption h1 .muted {
+  font-size: 13px;
+  font-weight: 400;
+}
