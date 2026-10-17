@@ -1308,3 +1308,35 @@ h3 {
     padding: 22px 12px;
   }
 }
+
+/* Homepage research introduction video */
+.intro-video-panel {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  align-self: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.intro-video-panel video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #071e28;
+}
+.intro-video-panel figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+}
+.intro-video-panel figcaption a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

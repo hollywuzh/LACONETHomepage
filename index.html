@@ -6,7 +6,7 @@
     <title>LACONET 低空计算网络组会平台</title>
     <meta name="description" content="LACONET 低空计算网络组会、文献解读与讨论归档工作台。">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260904-pid-rid">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261017-video">
   </head>
   <body data-page="home">
     <header class="site-header">
@@ -39,14 +39,16 @@
             <a class="button ghost" href="templates.html">查看模板</a>
           </div>
         </div>
-        <div class="network-panel" aria-label="低空网络拓扑视图">
-          <canvas id="networkCanvas" width="720" height="360"></canvas>
-          <div class="network-legend">
-            <span><i class="legend-dot air"></i> UAV</span>
-            <span><i class="legend-dot edge"></i> Edge</span>
-            <span><i class="legend-dot ground"></i> Ground</span>
-          </div>
-        </div>
+        <figure class="intro-video-panel" aria-labelledby="intro-video-caption">
+          <video id="labIntroVideo" controls playsinline preload="none" poster="materials/videos/laconet-research-introduction.jpg" aria-label="LACONET 低空计算网络研究团队介绍视频">
+            <source src="materials/videos/laconet-research-introduction.mp4" type="video/mp4">
+            您的浏览器不支持视频播放，可通过下方链接下载观看。
+          </video>
+          <figcaption id="intro-video-caption">
+            <span>课题组介绍 <span class="muted">· 约 1 分 24 秒</span></span>
+            <a href="materials/videos/laconet-research-introduction.mp4" download>下载视频</a>
+          </figcaption>
+        </figure>
       </section>
 
       <section class="metric-strip" aria-label="组会概览">
