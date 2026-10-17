@@ -31,6 +31,7 @@
       archive: "archive",
       equipment: "equipment",
       templates: "templates",
+      resources: "resources",
       directions: "directions"
     };
     qsa("[data-nav]").forEach((link) => {

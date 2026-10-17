@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>共享资源 | LACONET</title>
+    <meta name="description" content="LACONET 共享资源：仿真平台、代码框架、文献批注、汇报材料与模板。">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260904-pid-rid">
+  </head>
+  <body data-page="resources">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="LACONET 首页">
+        <span class="brand-mark">LA</span>
+        <span>
+          <strong>LACONET</strong>
+          <small>低空计算网络</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html" data-nav="home">本周组会</a>
+        <a href="papers.html" data-nav="papers">文献解读</a>
+        <a href="archive.html" data-nav="archive">历史归档</a>
+        <a href="equipment.html" data-nav="equipment">设备登记</a>
+        <a href="resources.html" data-nav="resources">共享资源</a>
+        <a href="templates.html" data-nav="templates">汇报模板</a>
+        <a href="directions.html" data-nav="directions">研究方向</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-heading">
+        <p class="eyebrow">Shared Resources</p>
+        <h1>共享资源</h1>
+        <p>集中整理课题组共享的仿真平台、参考代码、文献批注和汇报资料。</p>
+      </section>
+
+      <section class="section-block" aria-labelledby="simulationHeading">
+        <div class="section-title">
+          <p class="eyebrow">Simulation &amp; Code</p>
+          <h2 id="simulationHeading">仿真平台与代码</h2>
+        </div>
+        <article class="card">
+          <p class="eyebrow">GrADyS-SIM · 无人机轨迹规划 · 动态数据采集</p>
+          <h3>Trajectory Generalization Research / ADAPT-GUAV</h3>
+          <p>GrADyS-SIM 仿真平台的参考框架，用于学习无人机轨迹规划与动态 IoT 数据采集场景的搭建，并参考离线训练、在线推理与算法对比的组织方式。</p>
+          <p>仓库包含学习模型与训练代码、动态数据采集仿真实验，以及 LKH 基线和预训练模型的运行入口。适合从完整仿真流程入手，再替换路线规划模块开展研究。</p>
+          <p class="muted">共享来源：paperartificate687 / Trajectory_Generalization_Research。运行前按仓库 README 配置依赖、求解器及模型路径；预训练权重下载入口见 README。</p>
+          <div class="template-actions">
+            <a class="button primary" href="https://github.com/paperartificate687/Trajectory_Generalization_Research" target="_blank" rel="noopener noreferrer">打开 GitHub 仓库</a>
+            <a class="button ghost" href="https://github.com/paperartificate687/Trajectory_Generalization_Research#requirements--installation" target="_blank" rel="noopener noreferrer">安装与运行说明</a>
+            <a class="button ghost" href="https://github.com/paperartificate687/Trajectory_Generalization_Research/tree/master/experiments/Simulating_a_data_collection_scenario" target="_blank" rel="noopener noreferrer">仿真实验目录</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="section-block" aria-labelledby="materialsHeading">
+        <div class="section-title">
+          <p class="eyebrow">Reading &amp; Reports</p>
+          <h2 id="materialsHeading">文献、汇报与模板</h2>
+        </div>
+        <div class="template-grid">
+          <article class="card template-card">
+            <h3>文献与精读批注</h3>
+            <p>按研究方向浏览已入库论文，查看论文 PDF、精读批注、标注索引与对应汇报记录。</p>
+            <a class="button ghost" href="papers.html">进入文献解读库</a>
+          </article>
+          <article class="card template-card">
+            <h3>组会材料与会议纪要</h3>
+            <p>按会议日期查找同学的 PPT、PDF、Word 汇报材料，以及讨论结论和后续事项。</p>
+            <a class="button ghost" href="archive.html">查看历史归档</a>
+          </article>
+          <article class="card template-card">
+            <h3>汇报模板与精读指南</h3>
+            <p>预览、复制或下载文献解读模板、组会记录模板和论文精读汇报指南。</p>
+            <a class="button ghost" href="templates.html">使用汇报模板</a>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>LACONET 低空计算网络</span>
+      <span>© <span id="currentYear"></span></span>
+    </footer>
+
+    <script src="assets/js/data.js?v=20260904-pid-rid"></script>
+    <script src="assets/js/main.js?v=20261017-resources"></script>
+  </body>
+</html>

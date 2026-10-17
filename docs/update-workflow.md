@@ -15,6 +15,7 @@ https://hollywuzh.github.io/LACONETHomepage/
 - 会议纪要正文：`records/*.md`
 - 实验室设备台账：`data/equipment.csv`
 - 设备使用记录：`data/equipment-usage.csv`
+- 共享资源目录：`resources.html`，收录仿真平台、代码与现有资料入口
 - 汇报模板：`templates/*.md`
 
 ## 本地预览

@@ -1,6 +1,6 @@
 # LACONET 低空计算网络组会平台
 
-面向组内学生日常使用的静态网站，用于展示组会安排、文献解读、历史归档、设备登记、汇报模板与研究方向入口。
+面向组内学生日常使用的静态网站，用于展示组会安排、文献解读、历史归档、设备登记、共享资源、汇报模板与研究方向入口。
 
 ## 本地预览
 
@@ -35,6 +35,7 @@ http://localhost:8080
 - 新增会议纪要：在 `records/` 下新增一篇与 `meetings.csv` 中 `id` 对应的 Markdown
 - 更新设备台账：编辑 `data/equipment.csv`
 - 更新设备使用记录：编辑 `data/equipment-usage.csv`
+- 更新共享资源：编辑 `resources.html`，补充资源名称、用途、来源和访问入口
 - 修改汇报模板：编辑 `templates/` 下的 Markdown
 
 ## PID 与 RID 规则
@@ -64,6 +65,7 @@ http://localhost:8080
 ├── archive.html
 ├── equipment.html
 ├── templates.html
+├── resources.html
 ├── directions.html
 ├── data/
 │   ├── meetings.csv
