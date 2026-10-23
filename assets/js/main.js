@@ -239,7 +239,7 @@
         <p class="eyebrow">Reading</p>
         <h2>本周文献解读</h2>
       </div>
-      <div class="paper-list">${currentReports.map((report) => renderReportCard(report, byPid.get(reportPid(report)))).join("") || emptyState("暂无文献", "在 reports.csv 中关联本周 RID。")}</div>
+      <div class="paper-list">${currentReports.map((report) => renderReportCard(report, byPid.get(reportPid(report)))).join("") || emptyState("论文题目与材料待补充", "请查看本周组会安排；文献题目确定后将补充资料入口。")}</div>
     `);
 
     setHTML("#nextMeetingCard", `
@@ -263,7 +263,7 @@
           return `
             <a href="${meeting.record ? meetingURL(meeting.id) : "archive.html"}">
               <strong>${Data.escapeHTML(meeting.topic)}</strong>
-              <span>${Data.formatDate(meeting.date)} · ${Data.escapeHTML(reportPresenterList(meetingReports))}</span>
+              <span>${Data.formatDate(meeting.date)} · ${Data.escapeHTML(meetingReports.length ? reportPresenterList(meetingReports) : personList(meeting.presenter))}</span>
             </a>
           `;
         }).join("") || emptyState("暂无归档", "历史组会记录尚未录入。")}
@@ -546,7 +546,7 @@
       <div class="paper-hero-meta">
         <span>${Data.escapeHTML(meeting.mode || "待确认")}</span>
         <span>主持人：${Data.escapeHTML(personList(meeting.host))}</span>
-        <span>汇报：${Data.escapeHTML(reportPresenterList(meetingReports))} · ${Data.escapeHTML(meetingReports.length ? `${meetingReports.length} 个 RID` : "待定")}</span>
+        <span>汇报：${Data.escapeHTML(meetingReports.length ? reportPresenterList(meetingReports) : personList(meeting.presenter))} · ${Data.escapeHTML(meetingReports.length ? `${meetingReports.length} 个 RID` : "待定")}</span>
         ${Data.renderStatus(meeting.status)}
       </div>
       <div class="material-row">
